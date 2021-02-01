@@ -1,4 +1,14 @@
 package com.parking.slot;
 
-public class Slot30Kw implements Slot {
+import com.parking.FeePolicy;
+
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+public class Slot30Kw extends SlotDefaultImpl {
+
+    public Slot30Kw(int id) {
+        super(id);
+    }
+
 }

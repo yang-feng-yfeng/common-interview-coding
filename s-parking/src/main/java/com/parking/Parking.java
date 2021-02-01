@@ -1,16 +1,16 @@
 package com.parking;
 
-import com.parking.slot.Slot;
+import com.parking.vehicle.Vehicle;
 
-import java.util.List;
+public interface Parking {
 
-public class Parking {
+    /**
+     *
+     * @return -1 for no place, otherwise the number of the parking lot
+     */
+    int vehicleIn(Vehicle vehicle);
 
-    private final FeePolicy policy;
-    private final List<Slot> slots;
+    double vehicleOut(Vehicle vehicle);
 
-    public Parking(FeePolicy policy, int nbStandardSlot, int nbSlot30Kw, int nbSlot50Kw) {
-        this.policy = policy;
-
-    }
+    double vehicleOut(int vehicleId);
 }
